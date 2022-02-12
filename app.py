@@ -20,7 +20,7 @@ status =''
 def home():
     return {'text':'This is a trial'} 
 
-@app.get('/predict/{data}')
+@app. post('/predict')
 def predict_notes(data: BankNote):
     data = data.dict()
     variance = data['variance']
