@@ -12,7 +12,7 @@ class BankNote(BaseModel):
 
 app = FastAPI(debug=True)
 
-classifier = pickle.load(open('hopes.pickle','rb'))
+classifier = pickle.load(open('revamped.pickle','rb'))
 status =''
 
 
