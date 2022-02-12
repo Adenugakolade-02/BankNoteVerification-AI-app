@@ -23,7 +23,7 @@ def home():
 @app.post('/predict')
 def predict_notes(data: BankNote):
     data = data.dict()
-    variance = data['vaiance']
+    variance = data['variance']
     skewness = data['skewness']
     curtosis = data['curtosis']
     entropy = data['entropy']
