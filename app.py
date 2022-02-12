@@ -9,9 +9,9 @@ class BankNote(BaseModel):
     curtosis: float
     entropy: float
 
-class Note(variance: float, skewness: float, curtosis: float, entropy: float){
+# class Note(variance: float, skewness: float, curtosis: float, entropy: float){
 
-}
+# }
 
 
 app = FastAPI(debug=True)
