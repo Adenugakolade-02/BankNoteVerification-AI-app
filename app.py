@@ -24,13 +24,13 @@ status =''
 def home():
     return {'text':'This is a trial'} 
 
-@app.get('/predict/{variance,skewness, curtosis,entropy}')
-def predict_notes(variance: float, skewness: float, curtosis: float, entropy: float):
-    # data = data.dict()
-    # variance = data['variance']
-    # skewness = data['skewness']
-    # curtosis = data['curtosis']
-    # entropy = data['entropy']
+@app.post('/predict')
+def predict_notes(data: BankNote):
+    data = data.dict()
+    variance = data['variance']
+    skewness = data['skewness']
+    curtosis = data['curtosis']
+    entropy = data['entropy']
 
     prediction = classifier.predict([[variance, skewness, curtosis, entropy]])
 
