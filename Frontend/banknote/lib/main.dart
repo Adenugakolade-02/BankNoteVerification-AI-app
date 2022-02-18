@@ -53,6 +53,7 @@ class _HomeScreenState extends State<HomeScreen> {
     Map<String, double>? data;
     
     void dataSaved(){
+      // Saves the data entered by the user
       setState(() {
               data= {
           "variance": varianceText,
@@ -64,20 +65,10 @@ class _HomeScreenState extends State<HomeScreen> {
       });
     }
 
-    void savePrediction(String prediction){
-
-    }
     
 
     void savedElement() async{
-
-      // String? pred = await AppModel(data!).getPrediction(context);
-      
-      // setState(() {
-      // result = pred;
-      // print('the result is $result');
-      // });
-
+      // Awaits the prediction of banknote parameters entered by the use and also pops up a Dialog box
       dataSaved();
 
       String? pred = await AppModel(data!).getPrediction(context);
@@ -100,14 +91,6 @@ class _HomeScreenState extends State<HomeScreen> {
             },)
       ],)
       );
-
-      // String? pred = await AppModel(data!).getPrediction(context);
-      
-      // setState(() {
-      // result = pred;
-      // print('the result is $result');
-      // });
-    
   }
 
 
